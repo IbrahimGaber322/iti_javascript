@@ -14,9 +14,9 @@ const Discount =()=>{
                     <Box sx={{display:"flex", justifyContent:"center", flexDirection:"column", alignItems:"center", m:3, width:"500px"}}>
                     <Typography>Title: {p.title}</Typography>
                     <Typography>Description: {p.description}</Typography>
-                    <Typography>Price: {p.price}</Typography>
+                    <Typography >Price: $<span style={{textDecoration:"line-through"}}>{p.price}</span></Typography>
                     <Typography>Category: {p.category}</Typography>
-                    <Typography>Price after discount: {calcDisc(p.price)}</Typography>
+                    <Typography>Price after discount: ${calcDisc(p.price)}</Typography>
                     </Box>
                 ))
             }
