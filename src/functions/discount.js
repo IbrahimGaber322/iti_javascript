@@ -1,0 +1,4 @@
+const discount = (product) =>{
+
+     
+}

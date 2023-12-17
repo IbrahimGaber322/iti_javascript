@@ -8,6 +8,7 @@ import GuessGame from "./components/Guessgame";
 import { getCode , getComp } from "./functions/phones";
 import { useState } from "react";
 import Sum2num from "./components/Sum2num";
+import Discount from "./components/Discount";
 function App() {
   const [active, setActive] = useState("");
   return (
@@ -30,12 +31,16 @@ function App() {
           <Button onClick={()=>setActive("add")} sx={{m:3}}>
             Sum2num
           </Button>
+          <Button onClick={()=>setActive("discount")} sx={{m:3}}>
+            Discount
+          </Button>
         </Box>
         <Box sx={{ display: "flex", flexWrap: "wrap" }}>
              {active==="age"&&<AgeCalc />}
              {active==="even"&&<EvenOrOdd />}
              {active==="guess"&&<GuessGame />}
              {active==="add"&&<Sum2num />}
+             {active==="discount"&&<Discount />}
         </Box>
         {/* <Box sx={{ display: "flex", flexWrap: "wrap" }}>
         
