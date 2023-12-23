@@ -9,6 +9,9 @@ import { getCode , getComp } from "./functions/phones";
 import { useState } from "react";
 import Sum2num from "./components/Sum2num";
 import Discount from "./components/Discount";
+import QaGame from "./components/QaGame";
+import FontApp from "./components/Fontapp";
+import Fawry from "./components/Fawry";
 function App() {
   const [active, setActive] = useState("");
   return (
@@ -34,6 +37,15 @@ function App() {
           <Button onClick={()=>setActive("discount")} sx={{m:3}}>
             Discount
           </Button>
+          <Button onClick={()=>setActive("qa")} sx={{m:3}}>
+            QA Game
+          </Button>
+          <Button onClick={()=>setActive("font")} sx={{m:3}}>
+            Font App
+          </Button>
+          <Button onClick={()=>setActive("fawry")} sx={{m:3}}>
+            Fawry
+          </Button>
         </Box>
         <Box sx={{ display: "flex", flexWrap: "wrap" }}>
              {active==="age"&&<AgeCalc />}
@@ -41,6 +53,9 @@ function App() {
              {active==="guess"&&<GuessGame />}
              {active==="add"&&<Sum2num />}
              {active==="discount"&&<Discount />}
+             {active==="qa"&&<QaGame />}
+             {active==="font"&&<FontApp />}
+             {active==="fawry"&&<Fawry />}
         </Box>
         {/* <Box sx={{ display: "flex", flexWrap: "wrap" }}>
         
