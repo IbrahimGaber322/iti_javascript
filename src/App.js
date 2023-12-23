@@ -46,6 +46,9 @@ function App() {
           <Button onClick={()=>setActive("fawry")} sx={{m:3}}>
             Fawry
           </Button>
+          <Button target="_blank" href="https://blog-two-pi-91.vercel.app/" sx={{m:3}}>
+            APIs
+          </Button>
         </Box>
         <Box sx={{ display: "flex", flexWrap: "wrap" }}>
              {active==="age"&&<AgeCalc />}
